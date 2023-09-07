@@ -1,3 +1,4 @@
+%function to calculate the objective vector c 
 function objective = getObjectiveFunction(VX, FX, FeatX, VY, FY, FeatY)
 
     nx = size(VX,1);
@@ -21,8 +22,6 @@ function objective = getObjectiveFunction(VX, FX, FeatX, VY, FY, FeatY)
             objective( 3*(i-1)* fx + 3*(j-1)+1, 1) = norm(FeatX(FX(j,1), :)- FeatY(i, :) , 1);
             objective( 3*(i-1)* fx + 3*(j-1)+2, 1) = norm(FeatX(FX(j,2), :)- FeatY(i, :) , 1);
             objective( 3*(i-1)* fx + 3*(j-1)+3, 1) = norm(FeatX(FX(j,3), :)- FeatY(i, :) , 1);
-
-
         end
     end
 

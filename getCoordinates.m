@@ -1,3 +1,5 @@
+%function to calculate the coordinates on mesh $X$ for given nodes of X and
+%barycentric weightsget 
 function ret = getCoordinates(VX, FX, VY, FY, x)
 
     function [pointX, pointY, pointZ] = getPoint(d1, d2, d3, v1, v2 ,v3) %return 3D coordinates
